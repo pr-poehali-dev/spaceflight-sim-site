@@ -24,11 +24,10 @@ const NavBar = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Главная
-                </NavigationMenuLink>
-              </Link>
+              {/* Заменяем Link обернутый в NavigationMenuLink на простой NavigationMenuLink */}
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link to="/">Главная</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -46,11 +45,10 @@ const NavBar = () => {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/tutorials">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Руководства
-                </NavigationMenuLink>
-              </Link>
+              {/* Аналогично здесь */}
+              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                <Link to="/tutorials">Руководства</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
